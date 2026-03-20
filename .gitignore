@@ -9,3 +9,10 @@ woodbuffalowpavingtemp/fade.gif
 woodbuffalowpavingtemp/hts-cache/
 woodbuffalowpavingtemp/hts-log.txt
 woodbuffalowpavingtemp/index.html
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
