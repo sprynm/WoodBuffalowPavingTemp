@@ -1,23 +1,24 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const quickLinks = document.querySelector(".quick-links");
-
-if (menuToggle && quickLinks) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = quickLinks.classList.toggle("is-open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-  });
+function ensureFormFieldNames() {
+  const contactMessage = document.querySelector("#textarea_comp-kvgvkbfq");
+  if (contactMessage && !contactMessage.name) {
+    contactMessage.name = "message";
+  }
 }
 
-async function submitResendForm(form) {
-  const status = form.querySelector(".form-status");
-  const submitButton = form.querySelector('button[type="submit"]');
+function getFormStatus(form) {
+  return form.querySelector(".form-status, #comp-kvgvkbgy, #comp-kvgvk9de");
+}
+
+async function submitResendForm(form, endpoint) {
+  const status = getFormStatus(form);
+  const submitButton = form.querySelector('button[type="submit"], [data-testid="buttonElement"]');
   const formData = new FormData(form);
 
-  status.textContent = "Sending...";
+  status && (status.textContent = "Sending...");
   submitButton?.setAttribute("disabled", "true");
 
   try {
-    const response = await fetch(form.action, {
+    const response = await fetch(endpoint, {
       method: "POST",
       body: formData,
       headers: {
@@ -32,17 +33,32 @@ async function submitResendForm(form) {
     }
 
     form.reset();
-    status.textContent = "Thanks for submitting!";
+    status && (status.textContent = "Thanks for submitting!");
   } catch (error) {
-    status.textContent = error instanceof Error ? error.message : "Submission failed.";
+    status && (status.textContent = error instanceof Error ? error.message : "Submission failed.");
   } finally {
     submitButton?.removeAttribute("disabled");
   }
 }
 
-document.querySelectorAll("form[data-resend-form]").forEach((form) => {
-  form.addEventListener("submit", (event) => {
+document.addEventListener("submit", (event) => {
+  const form = event.target;
+
+  if (!(form instanceof HTMLFormElement)) {
+    return;
+  }
+
+  if (form.id === "comp-kvgvkbf5") {
     event.preventDefault();
-    submitResendForm(form);
-  });
-});
+    event.stopImmediatePropagation();
+    submitResendForm(form, "/api/contact");
+  }
+
+  if (form.id === "comp-kvgvk9c3") {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    submitResendForm(form, "/api/subscribe");
+  }
+}, true);
+
+ensureFormFieldNames();

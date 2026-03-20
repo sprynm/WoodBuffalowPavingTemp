@@ -21,19 +21,21 @@ export async function onRequestPost({ request, env }) {
   const email = String(formData.get("email") || "").trim();
   const phone = String(formData.get("phone") || "").trim();
   const service = String(formData.get("service") || "").trim();
+  const subject = String(formData.get("subject") || "").trim();
   const message = String(formData.get("message") || "").trim();
 
   if (!name || !email || !message) {
     return Response.json({ ok: false, error: "Name, email, and message are required." }, { status: 400 });
   }
 
-  const subject = `Wood Buffalo Paving inquiry from ${name}`;
+  const emailSubject = subject ? `Wood Buffalo Paving: ${subject}` : `Wood Buffalo Paving inquiry from ${name}`;
   const text = [
     "New contact request from the static site.",
     "",
     `Name: ${name}`,
     `Email: ${email}`,
     `Phone: ${phone || "Not provided"}`,
+    `Subject: ${subject || "Not provided"}`,
     `Project type: ${service || "Not provided"}`,
     "",
     "Message:",
@@ -46,6 +48,7 @@ export async function onRequestPost({ request, env }) {
       <li><strong>Name:</strong> ${escapeHtml(name)}</li>
       <li><strong>Email:</strong> ${escapeHtml(email)}</li>
       <li><strong>Phone:</strong> ${escapeHtml(phone || "Not provided")}</li>
+      <li><strong>Subject:</strong> ${escapeHtml(subject || "Not provided")}</li>
       <li><strong>Project type:</strong> ${escapeHtml(service || "Not provided")}</li>
     </ul>
     <p><strong>Message</strong></p>
@@ -53,7 +56,7 @@ export async function onRequestPost({ request, env }) {
   `;
 
   await sendResendEmail(env, {
-    subject,
+    subject: emailSubject,
     text,
     html,
     headers: email ? { "Reply-To": email } : undefined
