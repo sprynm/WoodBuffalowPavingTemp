@@ -3,218 +3,171 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wood Buffalo Paving | Fort McMurray Asphalt Paving</title>
+    <title>Fort McMurray Paving | Wood Buffalo Paving | Asphalt Paving</title>
     <meta
       name="description"
-      content="Wood Buffalo Paving serves Fort McMurray and surrounding communities with asphalt paving, resurfacing, parking lots, driveway work, and site preparation."
+      content="Wood Buffalo Paving provides asphalt paving, resurfacing, driveway work, parking lots, commercial roads, and site preparation in Fort McMurray."
     />
-    <meta name="theme-color" content="#0d0f12" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="icon" href="/assets/logo.png" />
     <link rel="stylesheet" href="/styles.css" />
     <script type="module" src="/script.js"></script>
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <a class="brand" href="#home" aria-label="Wood Buffalo Paving home">
-          <img src="/assets/logo.png" alt="Wood Buffalo Paving logo" class="brand__mark" />
-          <span class="brand__text">
-            <strong>Wood Buffalo Paving</strong>
-            <span>Fort McMurray asphalt paving</span>
-          </span>
-        </a>
-
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <nav id="site-nav" class="site-nav" aria-label="Primary">
+    <div class="page">
+      <header class="topbar">
+        <nav class="topbar__nav" aria-label="Primary">
+          <a href="#home">Home</a>
+          <a href="#book">Book Online</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="quick-links">
+            More
+          </button>
+        </nav>
+        <div class="quick-links" id="quick-links">
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#contact">Contact</a>
-          <a href="#book" class="nav-cta">Book Online</a>
-        </nav>
+        </div>
       </header>
 
       <main id="home">
-        <section class="hero section">
-          <div class="hero__copy reveal">
-            <p class="eyebrow">Paving with integrity</p>
-            <h1>Asphalt work built for northern weather and hard use.</h1>
-            <p class="lede">
-              We serve Fort McMurray with driveway paving, parking lots, resurfacing, and
-              complete site preparation. The work is practical, durable, and built around the
-              conditions that matter here.
-            </p>
-
-            <div class="hero__actions" id="book">
-              <a class="button button--primary" href="#contact">Request an estimate</a>
-              <a class="button button--ghost" href="tel:+17807999130">(780) 799-9130</a>
-            </div>
-
-            <ul class="hero__facts" aria-label="Key service highlights">
-              <li>
-                <strong>12-month warranty</strong>
-                <span>on new driveway installations</span>
-              </li>
-              <li>
-                <strong>Residential + commercial</strong>
-                <span>from driveways to municipal roads</span>
-              </li>
-              <li>
-                <strong>Local crew</strong>
-                <span>responsive, direct, and easy to reach</span>
-              </li>
-            </ul>
+        <section class="hero">
+          <div class="hero__intro">
+            <img class="hero__logo" src="/assets/logo.png" alt="WBP - LOGO on Badge" />
+            <h1>Paving With Integrity</h1>
+            <a class="hero__cta" href="#contact">Get in Touch</a>
           </div>
 
-          <div class="hero__visual reveal">
-            <div class="hero-mosaic" aria-hidden="true">
-              <figure class="hero-mosaic__tile hero-mosaic__tile--tall">
-                <img src="/assets/hero-1.jpg" alt="" />
-              </figure>
-              <figure class="hero-mosaic__tile">
-                <img src="/assets/hero-2.jpg" alt="" />
-              </figure>
-              <figure class="hero-mosaic__tile">
-                <img src="/assets/hero-3.jpg" alt="" />
-              </figure>
-              <figure class="hero-mosaic__tile">
-                <img src="/assets/hero-4.jpg" alt="" />
-              </figure>
-              <figure class="hero-mosaic__tile">
-                <img src="/assets/hero-5.jpg" alt="" />
-              </figure>
-              <figure class="hero-mosaic__tile hero-mosaic__tile--wide">
-                <img src="/assets/hero-6.jpg" alt="" />
-              </figure>
+          <div class="hero__gallery" aria-label="Project images">
+            <figure><img src="/assets/hero-1.jpg" alt="Paving work" /></figure>
+            <figure><img src="/assets/hero-2.jpg" alt="Paving work" /></figure>
+            <figure><img src="/assets/hero-3.jpg" alt="Paving work" /></figure>
+            <figure><img src="/assets/hero-4.jpg" alt="Paving work" /></figure>
+            <figure><img src="/assets/hero-5.jpg" alt="Paving work" /></figure>
+            <figure><img src="/assets/hero-6.jpg" alt="Paving work" /></figure>
+          </div>
+        </section>
+
+        <section id="about" class="content-block">
+          <p class="crumb">Home: Welcome</p>
+          <h2>About Us</h2>
+          <h3>A Local Expert Committed to Excellence</h3>
+          <p>
+            WOOD BUFFALO PAVING recognizes the need for Paving Excellence in Fort McMurray Alberta.
+            Our staff and crew provide clients with a specialized range of contracting services for
+            every construction project. Whether you’re looking to REFRESH, MAINTAIN or INSTALL new
+            asphalt, We are happy to help you deliver the results you seek. Contact our friendly
+            staff today and receive a free estimate.
+          </p>
+        </section>
+
+        <section id="services" class="content-block services">
+          <p class="crumb">Home: Services</p>
+          <h2>Our Services</h2>
+          <h3>Optimal Quality at Competitive Rates</h3>
+
+          <div class="services__layout">
+            <figure class="services__image">
+              <img src="/assets/service-roller.jpg" alt="Steam roller equipment paving" />
+            </figure>
+
+            <div class="services__copy">
+              <h4>ASPHALT</h4>
+              <p>Asphalt Paving &amp; Resurfacing</p>
+
+              <h5>PAVING DRIVEWAYS</h5>
+              <p>
+                Do you need your driveway paved or do you have a driveway that is failing? Let us
+                help you find out what caused the problem before you repair or replace it. Was it
+                tree roots, failed sub-grade, poor drainage, incorrect installation or poor design
+                or has your driveway died from old age? Different soils and traffic loads call for
+                different designs. Poor drainage whether it is standing water or sub-surface
+                moisture is a major source of driveway failure.
+              </p>
+              <p>
+                Perhaps you just want a new look! Give us a call or e-mail to discuss your driveway
+                needs or to set up an appointment.
+              </p>
+              <p>
+                WOOD BUFFALO PAVING stands behind our new driveway installations with a 12-month
+                warranty. We provide a strong gravel base with no less then twelve inches of
+                compacted gravel, complimented with a full three inches of compacted asphalt.
+              </p>
+
+              <h5>PAVING PARKING LOTS</h5>
+              <p>
+                We also pave and resurfacing parking lots. We can handle large commercial asphalt
+                paving jobs from strip malls to major distribution centers. For parking lots;
+                traffic flow and weight distribution are considered to ensure proper design and
+                depth of base as well as the thickness of asphalt surface coat.
+              </p>
+
+              <h5>COMMERCIAL/MUNICIPAL ROADS</h5>
+              <p>
+                WOOD BUFFALO PAVING has the ability to bid any size municipal/commercial project.
+                We have the resources to complete the entire project in house which gives us an
+                edge over the competition. With each project, comes different specifications and
+                designs which can be met and executed by our asphalt division.
+              </p>
+
+              <h5>RESURFACING</h5>
+              <p>
+                Asphalt resurfacing is a way to increase driveway longevity and curb appeal by
+                installing a two-inch surface coat of hot mix asphalt overtop of your existing
+                driveway. This is completed by first applying tac coat (essentially a bonding
+                agent) to your existing driveway. Then all low areas are filled, this is called a
+                level course. We then apply a two-inch surface coat over the entire driveway giving
+                it that new paved look. This is a more affordable solution than removing the
+                existing driveway and repaving.
+              </p>
+              <p>
+                But resurfacing only works in certain instance, if the driveway is too deteriorated
+                and has movement in the base, then the only option would be to remove the existing
+                driveway, fix any base issues and re install a new driveway.
+              </p>
+
+              <h5>SITE PREPARATION</h5>
+              <p>
+                The final driving surface is only as good as the foundation it sits on. For asphalt
+                to run its full lifespan and hold up for years to come, it requires a suitable
+                base. We offer complete services for new construction and site preparation to
+                ensure that the sub-base is sound and meets design requirements.
+              </p>
+              <p>
+                Services can include: engineering and design services, soil stabilization, water
+                and storm drainage and underground pipe repair to name a few. We can grade your
+                site, place a stabilized sub-base, and handle pipe installation and repair as
+                necessary to prepare your lot for its new asphalt surface. If you are thinking of
+                expanding parking areas or need grading services, we can meet your needs.
+              </p>
             </div>
           </div>
         </section>
 
-        <section id="about" class="section section--split">
-          <div class="section__heading reveal">
-            <p class="eyebrow">About us</p>
-            <h2>A local paving team focused on dependable results.</h2>
-          </div>
-          <div class="card card--text reveal">
-            <p>
-              Wood Buffalo Paving serves Fort McMurray and nearby communities with a practical
-              range of asphalt contracting work. We help clients refresh, maintain, or install
-              new asphalt and keep projects moving with clear communication and direct service.
-            </p>
-            <p>
-              If you need a driveway repaired, a parking lot resurfaced, or a site prepared for
-              new construction, we can assess the base conditions, drainage, and traffic demands
-              before recommending the right path forward.
-            </p>
-          </div>
-        </section>
-
-        <section id="services" class="section services">
-          <div class="section__heading reveal">
-            <p class="eyebrow">Our services</p>
-            <h2>Built for homes, commercial properties, and municipal projects.</h2>
-          </div>
-
-          <div class="services__grid">
-            <article class="service-card reveal">
-              <span class="service-card__index">01</span>
-              <h3>Asphalt paving</h3>
-              <p>
-                New construction, replacements, and resurfacing work designed for the loads and
-                weather that affect northern roads and driveways.
-              </p>
-            </article>
-
-            <article class="service-card reveal">
-              <span class="service-card__index">02</span>
-              <h3>Driveways</h3>
-              <p>
-                We look at roots, drainage, old base failure, and installation issues before
-                deciding whether repair, rebuild, or a fresh surface makes sense.
-              </p>
-            </article>
-
-            <article class="service-card reveal">
-              <span class="service-card__index">03</span>
-              <h3>Parking lots</h3>
-              <p>
-                Commercial lots are planned around flow, turning paths, load distribution, and
-                the thickness needed to hold up over time.
-              </p>
-            </article>
-
-            <article class="service-card reveal">
-              <span class="service-card__index">04</span>
-              <h3>Roads and bid work</h3>
-              <p>
-                We can take on larger bid-based projects and keep the work in-house from start to
-                finish.
-              </p>
-            </article>
-
-            <article class="service-card reveal">
-              <span class="service-card__index">05</span>
-              <h3>Resurfacing</h3>
-              <p>
-                A resurfacing layer can restore a sound base at a lower cost than full removal
-                and replacement.
-              </p>
-            </article>
-
-            <article class="service-card reveal">
-              <span class="service-card__index">06</span>
-              <h3>Site preparation</h3>
-              <p>
-                Grading, stabilization, drainage, and sub-base prep so the finished surface has a
-                base that can hold up.
-              </p>
-            </article>
-          </div>
-
-          <aside class="feature-panel reveal">
-            <div class="feature-panel__image">
-              <img
-                src="https://static.wixstatic.com/media/dff463_8ee49047f64742e490259a5933e111af~mv2.jpg"
-                alt="Paving crew operating a roller on a fresh asphalt surface"
-              />
-            </div>
-            <div class="feature-panel__text">
-              <p class="eyebrow">Why this matters</p>
-              <p>
-                A finished surface is only as strong as the base beneath it. We treat drainage,
-                compaction, and sub-grade work as part of the job, not an afterthought.
-              </p>
-            </div>
-          </aside>
-        </section>
-
-        <section id="contact" class="section contact">
-          <div class="contact__details reveal">
-            <p class="eyebrow">Contact</p>
-            <h2>Get in touch for a quote or project review.</h2>
-            <div class="contact-card">
-              <p>PO Box 5221, Station Main</p>
-              <p>Fort McMurray, Alberta T9H 3G3</p>
-              <a href="mailto:info@wbpaving.ca">info@wbpaving.ca</a>
-              <a href="tel:+17807999130">(780) 799-9130</a>
+        <section id="contact" class="content-block contact">
+          <p class="crumb">Contact</p>
+          <h2>Get in Touch</h2>
+          <div class="contact__grid">
+            <div class="contact__info">
+              <img src="/assets/hero-6.jpg" alt="Customer service representative" />
+              <address>
+                <p>PO BOX 5221, STATION MAIN</p>
+                <p>Fort McMurray, Alberta T9H 3G3</p>
+                <p><a href="mailto:Info@wbpaving.ca">Info@wbpaving.ca</a></p>
+                <p><a href="tel:+17807999130">(780) 799-9130</a></p>
+              </address>
+              <div class="social-icons" aria-label="Social links">
+                <a href="#" aria-label="Facebook"><img src="/assets/icon-facebook.png" alt="" /></a>
+                <a href="#" aria-label="Twitter"><img src="/assets/icon-twitter.png" alt="" /></a>
+                <a href="#" aria-label="Instagram"><img src="/assets/icon-instagram.png" alt="" /></a>
+                <a href="#" aria-label="Houzz"><img src="/assets/icon-houzz.png" alt="" /></a>
+              </div>
             </div>
 
-            <div class="socials" aria-label="Social links">
-              <a href="#" aria-label="Facebook"><img src="/assets/icon-facebook.png" alt="" /></a>
-              <a href="#" aria-label="Twitter"><img src="/assets/icon-twitter.png" alt="" /></a>
-              <a href="#" aria-label="Instagram"><img src="/assets/icon-instagram.png" alt="" /></a>
-              <a href="#" aria-label="Houzz"><img src="/assets/icon-houzz.png" alt="" /></a>
-            </div>
-          </div>
-
-          <div class="contact__form card reveal">
-            <form id="contact-form" action="/api/contact" method="post" data-resend-form>
-              <input type="text" name="company" tabindex="-1" autocomplete="off" class="visually-hidden" />
-              <div class="form-grid">
+            <div class="contact__forms">
+              <form class="form-card" action="/api/contact" method="post" data-resend-form>
+                <input type="text" name="company" tabindex="-1" autocomplete="off" class="visually-hidden" />
+                <h3>Request a Quote</h3>
                 <label>
                   <span>Name</span>
                   <input name="name" type="text" autocomplete="name" required />
@@ -232,54 +185,41 @@
                   <select name="service">
                     <option>Driveway</option>
                     <option>Parking lot</option>
-                    <option>Road or municipal work</option>
+                    <option>Commercial / municipal road</option>
                     <option>Resurfacing</option>
                     <option>Site preparation</option>
                   </select>
                 </label>
-              </div>
+                <label class="field-full">
+                  <span>Message</span>
+                  <textarea
+                    name="message"
+                    rows="6"
+                    placeholder="Submit your project details and we’ll get back to you."
+                    required
+                  ></textarea>
+                </label>
+                <button type="submit">Submit</button>
+                <p class="form-status" aria-live="polite"></p>
+              </form>
 
-              <label class="form-grid__full">
-                <span>Project details</span>
-                <textarea
-                  name="message"
-                  rows="6"
-                  placeholder="Tell us what needs paving, resurfacing, or preparation."
-                  required
-                ></textarea>
-              </label>
-
-              <div class="form-meta">
-                <p>We’ll respond with next steps and any follow-up questions.</p>
-                <button class="button button--primary" type="submit">Submit</button>
-              </div>
-
-              <p class="form-status" aria-live="polite"></p>
-            </form>
+              <form class="form-card form-card--secondary" id="book" action="/api/subscribe" method="post" data-resend-form>
+                <input type="text" name="company" tabindex="-1" autocomplete="off" class="visually-hidden" />
+                <h3>Subscribe Form</h3>
+                <label>
+                  <span>Email</span>
+                  <input name="email" type="email" autocomplete="email" required />
+                </label>
+                <button type="submit">Submit</button>
+                <p class="form-status" aria-live="polite"></p>
+              </form>
+            </div>
           </div>
-        </section>
-
-        <section class="section subscribe">
-          <div class="subscribe__copy reveal">
-            <p class="eyebrow">Updates</p>
-            <h2>Subscribe for project updates and availability.</h2>
-          </div>
-
-          <form class="subscribe__form card reveal" action="/api/subscribe" method="post" data-resend-form>
-            <input type="text" name="company" tabindex="-1" autocomplete="off" class="visually-hidden" />
-            <label>
-              <span>Email</span>
-              <input name="email" type="email" autocomplete="email" required />
-            </label>
-            <button class="button button--ghost" type="submit">Submit</button>
-            <p class="form-status" aria-live="polite"></p>
-          </form>
         </section>
       </main>
 
-      <footer class="site-footer">
-        <p>© 2019 Wood Buffalo Paving, Ltd.</p>
-        <p>Static Cloudflare Pages copy with Resend-backed forms.</p>
+      <footer class="footer">
+        <p>©2019 by WOOD BUFFALO PAVING.</p>
       </footer>
     </div>
   </body>

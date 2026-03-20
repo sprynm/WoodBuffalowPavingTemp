@@ -1,20 +1,12 @@
-const navToggle = document.querySelector(".nav-toggle");
-const shell = document.querySelector(".page-shell");
-const navLinks = document.querySelectorAll(".site-nav a");
+const menuToggle = document.querySelector(".menu-toggle");
+const quickLinks = document.querySelector(".quick-links");
 
-if (navToggle && shell) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = shell.classList.toggle("is-nav-open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
+if (menuToggle && quickLinks) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = quickLinks.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
   });
 }
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    shell?.classList.remove("is-nav-open");
-    navToggle?.setAttribute("aria-expanded", "false");
-  });
-});
 
 async function submitResendForm(form) {
   const status = form.querySelector(".form-status");
